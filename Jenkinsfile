@@ -19,13 +19,13 @@ pipeline {
     stage('init') {
       steps {
         echo 'Initialazing terraform'
-        sh './terraformw init'
+        sh './terraform init'
       }
     }
     stage('apply') {
       steps {
         echo 'Applying terraform'
-        sh './terraformw apply -auto-approve -no-color'
+        sh './terraform apply -auto-approve -no-color'
       }
     }
   }
